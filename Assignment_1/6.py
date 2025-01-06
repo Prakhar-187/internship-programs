@@ -15,8 +15,7 @@ O=0
 for i in range(0,len(l)):
     if(l[i]%2==0):
         E=E+1
-
-    if(l[i]%2!=0):
+    else:
         O=O+1
 
 print(f"Number of even numbers: {E}")

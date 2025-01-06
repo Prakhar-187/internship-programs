@@ -1,22 +1,25 @@
-input_1=input("Enter your password: ")
-alp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-ALP = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-num=[0,1,2,3,4,5,6,7,8,9]
-char=['$','#','@']
-# min 6 max 16
+
+password = input("Enter your password: ")
+alphabet = 0
+Capital = 0
+Digit = 0
+Special = 0
 
 
-for i in range(0,27):
-    for alp[i] in input_1:
-        for ALP[i] in input_1:
-            # for j in range (0,10):
-            #     for num[j] in input_1:
-            #         for k in range(0,3):
-            #             for char[k] in input_1:
-            #                 print("Your passsword is valid")
-            #             else:
-            #                 print("Reconsider your password")                            
-                                      
+for i in password:
 
+    if(i.islower()):
+        alphabet+=1
+    if(i.isdigit()):
+        Digit+=1 
+    if(i.isupper()):
+        Capital+=1
+    if(i=="$" or i=="#" or i=="@"):
+        Special+=1
+                  
 
-
+if(alphabet>0 and Digit>0 and Special>0 and Capital>0 and 6<=len(password)<=16 ):
+                print("Valid password")
+else:
+                print("Invalid password")
+                

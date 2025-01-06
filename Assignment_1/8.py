@@ -1,9 +1,11 @@
 
 i=0
 while(i<7):
-    if(i==3):
+    if(i==3 or i==6):
+        i=i+1
         continue
-    elif(i==6):
-        continue
-    i=i+1
     print(i)
+    i=i+1
+
+
+
