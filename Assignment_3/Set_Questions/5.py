@@ -1,0 +1,5 @@
+set_a=set(['python','free','exercuse','tutorial','set','library'])
+set_a.remove("free")
+print(set_a)
+set_a.remove("python")
+print(set_a)

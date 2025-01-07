@@ -1,14 +1,21 @@
 sample=[12,15,11,12,8,15,3,3]
 print(sample)
-unique_list=[]
 
-for i in range (1,len(sample)-1):
-    if i  in sample:
-        continue
+diff_list=[]
+same_list=[]
+
+for i in range (0,len(sample)):
+    if(sample.count(sample[i]) > 1):
+        if(sample[i] in same_list):
+            continue
+        else:
+            same_list.append(sample[i])
     else:
-        unique_list.append(sample[i])
+        diff_list.append(sample[i])
 
-print(f"unique items: {unique_list}",end=",")
+unique_list = diff_list + same_list
+
+print(f"unique items: {unique_list}")
 
 t=tuple(unique_list)
 print(f"tuple: {t}" )
