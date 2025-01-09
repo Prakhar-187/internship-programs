@@ -6,6 +6,10 @@ same_list=[]
 
 for i in range (0,len(sample)):
     if(sample.count(sample[i]) > 1):
+#         sample.remove(sample[i])
+#         # len(sample)-=len(sample)
+
+# print(sample)
         if(sample[i] in same_list):
             continue
         else:

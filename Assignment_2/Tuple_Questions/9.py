@@ -5,7 +5,7 @@ n=input("Enter element: ")
 if(n in l):
     a=input("Element exists.\nFor removing press y else n: ")
     if(a=="y"):
-        c=l.remove(n)
+        l.remove(n)
         print(tuple(l))
     elif(a=="n"):
         print(t)
